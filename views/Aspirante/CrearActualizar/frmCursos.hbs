@@ -1,0 +1,32 @@
+{{>header}}
+<span>{{msj}}</span>
+<form class="needs-validation" novalidate action="/Aspirante/frmCursos?acc={{accURL}}&save=1" method="post">
+	<div class="form-group col-md-6">
+		<label for="txt_id_curso">ID Curso *</label>
+		<input type="text" class="form-control" id="txt_id_curso" value="{{txt_id_curso}}" name="txt_id_curso" readonly="readonly" required/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="txt_nombre_curso">Nombre Curso *</label>
+		<input type="text" class="form-control" id="txt_nombre_curso" value="{{txt_nombre_curso}}" readonly="readonly" name="txt_nombre_curso" required/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="lst_modalidad">Modalidad</label>
+		<input type="text" class="form-control" id="lst_modalidad" value="{{lst_modalidad}}" readonly="readonly" name="lst_modalidad" required/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="txt_intensidad">Intensidad Horaria</label>
+		<input type="text" class="form-control" id="txt_intensidad" value="{{txt_intensidad}}" readonly="readonly" name="txt_intensidad"/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="txt_valor">Valor *</label>
+		<input type="text" class="form-control" id="txt_valor" value="{{txt_valor}}" readonly="readonly" name="txt_valor" required/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="txa_descripcion">Descripci&oacute;n *</label>
+		<textarea class="form-control" id="txa_descripcion" readonly="readonly" name="txa_descripcion" rows="3" required>{{txa_descripcion}}</textarea>
+	</div>
+	{{#ifCond accURL '!=' 'ver'}}
+		<button class="btn btn-primary" type="submit">Inscribir</button>
+	{{/ifCond}}
+</form>
+{{>footer}}

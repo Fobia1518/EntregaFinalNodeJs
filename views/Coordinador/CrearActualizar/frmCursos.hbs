@@ -1,0 +1,49 @@
+{{>header}}
+<span>{{msj}}</span>
+<form class="needs-validation" novalidate action="/Coordinador/frmCursos?acc={{accURL}}&save=1" method="post">
+	<span>Los compos con "*" son requeridos</span>
+	<div class="form-group col-md-6">
+		<label for="txt_id_curso">ID Curso *</label>
+		<input type="text" class="form-control" id="txt_id_curso" value="{{txt_id_curso}}" name="txt_id_curso" {{#ifCond accURL '!=' 'crear'}} readonly="readonly" {{/ifCond}} required/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="txt_nombre_curso">Nombre Curso *</label>
+		<input type="text" class="form-control" id="txt_nombre_curso" value="{{txt_nombre_curso}}" name="txt_nombre_curso" required/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="lst_modalidad">Modalidad</label>
+		<select class="form-control" id="lst_modalidad" value="{{lst_modalidad}}" name="lst_modalidad">
+			<option value="">Selecciona Modalidad</option>
+			<option {{#ifCond lst_modalidad '==' 'Virtual'}} selected {{/ifCond}} value="Virtual">Virtual</option>
+			<option {{#ifCond lst_modalidad '==' 'Presencial'}} selected {{/ifCond}} value="Presencial">Presencial</option>
+		</select>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="txt_intensidad">Intensidad Horaria</label>
+		<input type="text" class="form-control" id="txt_intensidad" value="{{txt_intensidad}}" name="txt_intensidad"/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="txt_valor">Valor *</label>
+		<input type="text" class="form-control" id="txt_valor" value="{{txt_valor}}" name="txt_valor" required/>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="txa_descripcion">Descripci&oacute;n *</label>
+		<textarea class="form-control" id="txa_descripcion" name="txa_descripcion" rows="3" required>{{txa_descripcion}}</textarea>
+	</div>
+	<div class="form-group col-md-6">
+		<label for="lst_docente">Docente *</label>
+		<select class="form-control" id="lst_docente" value="{{lst_docente}}" name="lst_docente">
+			{{{consultarDocentes rutaDataUsers lst_docente}}}
+		</select>
+	</div>
+	<div class="form-group col-md-6" style="{{#ifCond accURL '==' 'crear'}} display:none; {{/ifCond}}">
+		<label for="lst_estado">Estado</label>
+		<select class="form-control" id="lst_estado" value="{{lst_estado}}" name="lst_estado">
+			<option {{#ifCond lst_estado '==' 'Activo'}} selected {{/ifCond}} value="Activo">Activo</option>
+			<option {{#ifCond lst_estado '==' 'Inactivo'}} selected {{/ifCond}} value="Inactivo">Inactivo</option>
+			<option {{#ifCond lst_estado '==' 'Cerrado'}} selected {{/ifCond}} value="Cerrado">Cerrado</option>
+		</select>
+	</div>
+	<button class="btn btn-primary" type="submit">{{#ifCond accURL '==' 'crear'}} Crear {{else}} Actualizar {{/ifCond}}</button>
+</form>
+{{>footer}}

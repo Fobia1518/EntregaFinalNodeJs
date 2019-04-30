@@ -1,0 +1,24 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Primero",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Jhon",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "jquery": "^3.3.1",
+    "mongodb": "^3.2.3",
+    "multer": "^1.4.1",
+    "popper.js": "^1.14.7",
+    "socket.io": "^2.2.0",
+    "yargs": "^13.2.2"
+  }
+}

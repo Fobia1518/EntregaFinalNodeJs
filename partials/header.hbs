@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="js/socket.js"></script>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="../css/bootstrap.min.css"  type="text/css">
+</head>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>Historias de usuario Grupal 1 tdea </h1>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="/login">Iniciar Sesion</a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/registrarUsuario">Registrar Estudiante</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Coordinador</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/Coordinador/lstCursos">Listar Cursos</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Docente</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/Docente/lstCursos">Mis Cursos</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Aspirante</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/Aspirante/lstCursos">Listar Cursos</a>
+        <a class="dropdown-item" href="/Aspirante/lstMisCursos">Mis Cursos</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/chatBot">Chat-Bot</a>
+    </li>
+  </ul>
+</nav>
+
+<body>
