@@ -32,7 +32,7 @@ function chatBot() {
 		if(this.match('(info|informacion)(\\s|!|\\.|$)'))
 		{
 			nombre = "Informacion de los cursos";
-			url = "<a href=\"http://localhost:3000/Aspirante/lstCursos\" target=\"_blank\">";
+			url = "<a href=\"/Aspirante/lstCursos\" target=\"_blank\">";
 			mensaje ="Si necesitas informacion relacionada con los cursos puedes dirijirte a esta direccion"+ " ; " + url + " [ " + nombre;
 			return mensaje;
 		}
@@ -40,7 +40,7 @@ function chatBot() {
 		if(this.match('(cursos|materias|tiempo)(\\s|!|\\.|$)'))
 		{
 			nombre = "Cursos";
-			url = "<iframe width=\"100%\" height=\"300\" src=\"http://localhost:3000/Aspirante/lstCursos\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+			url = "<iframe width=\"100%\" height=\"300\" src=\"/Aspirante/lstCursos\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
 			mensaje ="Si necesitas informacion relacionada con tu tarjeta de credito dirijite a esta direccion"+ "<br><br><br>"+ " ; " + url + " [ " + nombre;
 			return mensaje;
 		}
